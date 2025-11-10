@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Password Strength Checker Website
 
 A beautiful web application to check password strength with a video background and modern UI.
@@ -49,4 +50,3 @@ password_checker/
 ## Note
 
 You'll need to add your own background video file (`background.mp4`) to the `static/` folder. The video should be in MP4 format for best browser compatibility.
-
