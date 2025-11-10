@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <div class="overlay-container">
+        <div class="blur-box">
+            <h1>🛡️ Password Strength Checker</h1>
+            <p class="subtitle">Ithokke oru password anoda..? 🛡️</p>
+            
+            <form id="passwordForm">
+                <div class="form-group">
+                    <label for="name">പേര് (optional):</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">പാസ്സ്‌വേർഡ് നൽകൂ:</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Enter password" required>
+                        <button type="button" id="togglePassword" class="eye-btn" aria-label="Toggle password visibility">
+                            <span class="eye-icon">👁️</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <button type="submit" id="submitBtn">Check Password</button>
+            </form>
+            
+            <div id="loadingSpinner" class="loading-spinner hidden">
+                <div class="spinner"></div>
+                <p>Checking password strength...</p>
+            </div>
+            
+            <div id="result" class="result hidden">
+                <div class="result-content">
+                    <h2 id="strengthLabel"></h2>
+                    <p id="feedbackText"></p>
+                </div>
+                <button id="checkAgainBtn" class="check-again-btn">Check Another Password</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
