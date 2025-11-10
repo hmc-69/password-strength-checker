@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Password Strength Checker Website
 
 A beautiful web application to check password strength with a video background and modern UI.
